@@ -8,5 +8,5 @@ This project is an AI-powered interview assistant that utilizes Retrieval-Augmen
 -   **Pinecone DB**: A vector database to store and search embeddings efficiently.
 -   **RAG Model**: Dynamic AI chat completion using Retrieval-Augmented Generation.
 -   **Chat History**: Tracks previous user prompts and AI responses to avoid repetitive questions.
--   **Multi-Modal Search**: Search across multiple documents like resumes, job descriptions, or both.
+-   **Multi-Modal Search**: Search across multiple documents like resume or job description.
 -   **Namespaces and Metadata**: Dynamically create namespaces for each user and utilize metadata for specific document searches.
