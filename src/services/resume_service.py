@@ -107,4 +107,4 @@ def _create_documents(request: TrainModelRequest):
 
 def _generate_namespace_id(request: TrainModelRequest):
     username = request.user_email.split('@')[0]
-    return f"{username}_{request.resume_id}"
+    return f"{username}-{request.reference_id}"
