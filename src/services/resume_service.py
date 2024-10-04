@@ -13,7 +13,7 @@ from werkzeug.exceptions import NotFound, BadRequest
 from ..types import TrainModelRequest, TrainModelResponse, ChatCompletionRequest, ChatCompletionResponse
 from ..config import resume_index, openai_model, resume_system_prompt
 
-def train_model(request: TrainModelRequest):
+async def train_model(request: TrainModelRequest):
     namespace_id = _generate_namespace_id(request=request)
 
     # If namespace already exists, return with bad request.
@@ -27,9 +27,14 @@ def train_model(request: TrainModelRequest):
     vector_store = PineconeVectorStore(index=resume_index, embedding=OpenAIEmbeddings(), namespace=namespace_id)
 
     # Insert documents into vector store.
-    vector_store.add_documents(documents=documents)
+    await _batch_upsert(vector_store, documents)
     
     return TrainModelResponse(status="success", namespace_id=namespace_id)
+
+async def _batch_upsert(vector_store, documents, batch_size=50):
+    for i in range(0, len(documents), batch_size):
+        batch = documents[i:i + batch_size]
+        vector_store.add_documents(documents=batch)
 
 
 def chat_completion(request: ChatCompletionRequest):

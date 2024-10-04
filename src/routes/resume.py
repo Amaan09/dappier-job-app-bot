@@ -5,10 +5,10 @@ from ..types import TrainModelRequest, ChatCompletionRequest
 bp = Blueprint('resume', __name__, url_prefix='/resume')
 
 @bp.route("/train_model", methods=['POST']) 
-def train_model():
+async def train_model():
     data = request.get_json()
     train_model_request = TrainModelRequest(**data)
-    response = resume_service.train_model(train_model_request)
+    response = await resume_service.train_model(train_model_request)
     return jsonify(response.to_dict()), 200
 
 @bp.route("/chat_completion", methods=['POST'])
