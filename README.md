@@ -96,17 +96,23 @@ Ensure you have the following software installed:
 
 1. **Start the Service:**
 
-   Run the script to start the service:
+   Run the script to start the development server:
 
    ```bash
    flask --app src run --debug
    ```
 
-2. **API Interaction:**
+   Run the script to start the production server:
+
+   ```bash
+   gunicorn src:app
+   ```
+
+3. **API Interaction:**
 
    Use the API endpoints configured in `src/routes/resume.py` to handle requests from other system components for processing resumes and generating output.
 
-3. **Testing and Development:**
+4. **Testing and Development:**
 
    Adjust the model parameters and prompts in configuration files as necessary to refine results or adapt to new requirements.
 
