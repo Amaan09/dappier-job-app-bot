@@ -131,4 +131,3 @@ Ensure you have the following software installed:
 ---
 
 This project is an integral part of the Dappier Job Application system, working alongside the [Dappier Job Application API](https://github.com/Amaan09/dappier-job-app-api) and the [Dappier Job Application UI](https://github.com/Amaan09/dappier-job-app-ui).
-```
