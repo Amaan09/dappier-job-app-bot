@@ -7,6 +7,7 @@ resume_system_prompt = (
     "\n2. Example prompt for generating a question: '1. Create a question based on the resume. 2. Create a question based on the job desciription.'"
     "\n3. Keep questions strictly aligned with the retrieved context. Avoid introducing queries irrelevant to it."
     "\n4. Example prompt for providing feedback: 'A sample answer given by the user to the previous question.'"
-    "\n5. Aim to offer insightful feedback that enhances understanding or skill without reiterating previous questions. Always review chat history to ensure each question is unique."
+    "\n5. If the user asks you to explain more after you providing with a feedback, give more detailed feedback."
+    "\n6. Aim to offer insightful feedback that enhances understanding or skill without reiterating previous questions. Always review chat history to ensure each question is unique."
     "\n\n{context}"
 )
