@@ -2,13 +2,25 @@
 
 ## Overview
 
-The Dappier Job Application Bot is a RAG (Retrieve and Generate) model service built to process user-uploaded resumes and job descriptions, providing insightful feedback and generating potential interview questions. This service integrates with the Dappier Job Application API to enhance the application's capabilities by handling the core natural language processing tasks.
+The Dappier Job Application Bot is a cutting-edge RAG (Retrieve and Generate) model service engineered to process user-uploaded resumes and job descriptions. It provides insightful feedback and generates potential interview questions to enhance the application experience. This service is seamlessly integrated with the Dappier Job Application API, handling core natural language processing tasks with precision and efficiency.
 
 ## Features
 
-- **Model Processing:** Utilizes advanced RAG models to process text data and generate feedback.
-- **Customizable Prompts:** Allows configuration of system prompts for various use cases.
-- **Integration Ready:** Designed to integrate seamlessly with other parts of the Dappier system.
+- **Advanced Model Processing:** Leverages state-of-the-art RAG models to process text data effectively, offering users tailored feedback and suggestions.
+- **Customizable Prompts:** Users can configure system prompts to suit various use cases, providing a personalized interaction experience.
+- **OpenAI Integration:** Utilizes OpenAIEmbeddings, supported by an Open AI account setup for token usage, to enhance text processing capabilities.
+- **Flask Project Structure:** The backend is structured using Flask, ensuring robust and scalable route and service management.
+- **API Key Security:** Environment variables securely store API keys, maintaining the integrity of user data.
+- **RAG Model Interaction:** Features a dedicated route for chat completion with the RAG model and an initial model training route.
+- **Pinecone Vector Database:** Implements Pinecone as a vector database to efficiently handle and search large datasets.
+- **Dynamic Embeddings and Indexes:** Processes raw data into vector embeddings, creating dynamic indexes and namespaces tailored for individual users and resumes.
+- **Metadata-Driven Search:** Employs metadata to refine searches within vector datasets, targeting either resumes or job descriptions.
+- **User-Specific Namespaces:** Constructs unique namespaces for different users based on uploaded resumes, ensuring organized data management.
+- **Chat History Tracking:** Maintains chat history to facilitate diverse question generation and minimize repetitive feedback.
+- **Multi-modal Search Capabilities:** Supports searching across multiple document types, such as resumes and job descriptions, simultaneously.
+- **Heroku Deployment:** The Flask application is deployed on Heroku, ensuring reliable and scalable application access.
+
+With these comprehensive features, the Dappier Job Application Bot is equipped to deliver exceptional user support and enhance the job application process through intelligent text analysis and feedback mechanisms.
 
 ## Project Structure
 
