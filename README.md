@@ -1,5 +1,17 @@
 # Dappier Job Application Bot
 
+Welcome to the Dappier Job Application RAG Model repository. This repository focuses on the implementation of the RAG (Retrieval-Augmented Generation) model, which is designed to enhance the job application process. By processing resumes and job descriptions, the model provides insightful feedback and generates potential interview questions. Our aim is to seamlessly integrate with the backend API and deliver accurate and valuable insights to improve the user experience in the job application platform.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+
 ## Overview
 
 The Dappier Job Application Bot is a cutting-edge RAG (Retrieve and Generate) model service engineered to process user-uploaded resumes and job descriptions. It provides insightful feedback and generates potential interview questions to enhance the application experience. This service is seamlessly integrated with the Dappier Job Application API, handling core natural language processing tasks with precision and efficiency.
